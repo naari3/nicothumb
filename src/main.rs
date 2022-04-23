@@ -34,7 +34,7 @@ async fn main() -> Result<()> {
     let document = kuchiki::parse_html().one(html);
     let thumbnail_meta = document
         .select_first("head > meta[name='thumbnail']")
-        .unwrap();
+        .expect("meta tag does not exist. page is 404 maybe?");
 
     let thumbnail_meta = thumbnail_meta.attributes.borrow();
     let thumbnail_content = thumbnail_meta.get("content");
