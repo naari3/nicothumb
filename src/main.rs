@@ -11,7 +11,7 @@ use tokio::{
 #[clap(
     name = "nicothumb",
     author = "naari3",
-    version = "v1.0.1",
+    version = "v1.0.2",
     about = "Download nicovideo thumbnail."
 )]
 struct AppArg {
